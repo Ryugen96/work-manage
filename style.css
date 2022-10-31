@@ -1,0 +1,38 @@
+body {
+    background-color: #f0f0f0;
+    font-size: 12px;
+    margin: 100px;
+}
+#form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+.form-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.left {
+    text-align: left !important;
+}
+
+.center {
+    text-align: center !important;
+    margin: 0 auto !important
+    ;
+}
+
+.border1 {
+    border: 1px solid gray;
+}
+
+.border1 th , td {
+    border: 1px solid gray;
+}
