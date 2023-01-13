@@ -34,7 +34,7 @@
             <th>総労働</th>
           </tr>
 
-          <tr th:each="attendance : ${attendances}">
+          <tr th:each="attendance : ${attendancesList}">
             <td th:text="${attendance.id}"></td>
             <td th:text="${attendance.date}"></td>
 <!--            <td th:text="${attendance.begin_time}"></td>-->

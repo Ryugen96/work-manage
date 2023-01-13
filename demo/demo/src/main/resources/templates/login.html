@@ -5,14 +5,14 @@
     </head>
     <body>
         <div th:if="${param.error}">
-            Invalid username anddd password.
+            ユーザー名とパスワードが無効です。
         </div>
         <div th:if="${param.logout}">
-            You have been logged out.
+            ログアウトしました。
         </div>
         <form th:action="@{/login}" method="post">
-            <div><label> Userrrr Name : <input type="text" name="username"/> </label></div>
-            <div><label> Password: <input type="password" name="password"/> </label></div>
+            <div><label> ログインID: <input type="text" name="username"/> </label></div>
+            <div><label> パスワード: <input type="password" name="password"/> </label></div>
             <div><input type="submit" value="Sign In"/></div>
         </form>
     </body>

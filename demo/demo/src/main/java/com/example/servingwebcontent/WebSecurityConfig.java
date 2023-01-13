@@ -21,7 +21,7 @@ public class WebSecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.formLogin(login ->
-				login.loginProcessingUrl("/login").loginPage("/login")
+				login.loginProcessingUrl("/login").loginPage("/")
                  .defaultSuccessUrl("/kintai")
                 .failureUrl("/login?error").permitAll()
 						.failureHandler(new MyAuthenticationFailureHandler())       // 認証失敗時に呼ばれるハンドラクラス

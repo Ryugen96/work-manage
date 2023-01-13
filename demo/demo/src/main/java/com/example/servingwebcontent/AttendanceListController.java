@@ -12,13 +12,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class AttendanceListController {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	private String string = "select hizuke,start,finish,rest,total from \"attendances\" ";
 	
 	@GetMapping("/attendanceList")
 	public String attendanceList(Model model) {
-	String sql = "select date,start,finish,rest,total from \"attendances\"";
+	String sql = string;
 		//String sql = "select id,date from \"attendances\"";
 		List<Map<String, Object>> attendances = jdbcTemplate.queryForList(sql);
 		model.addAttribute("attendances", attendances);
+		System.out.println("hello");
+		System.out.println(attendances);
 		return "attendanceList";
 	}
 
