@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link th:href="@{/css/style_global.css}" rel="stylesheet">
+    <link th:href="@{/css/style_attendance_list.css}" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="C:\Users\hosom\OneDrive\デスクトップ\kadai2\work-manage\demo\demo\src\main\resources\static\css\style_global.css" media="all" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="C:\Users\hosom\OneDrive\デスクトップ\kadai2\work-manage\demo\demo\src\main\resources\static\css\style_attendance_list.css" media="all" /> -->
+  </head>
+  <body>
+    <header class="header">
+      <nav class="global_nav">
+        <ul>
+          <li><a href="./kintai.html" class="nav_item">勤怠入力</a></li>
+          <li><a href="./workplace.html" class="nav_item">勤務場所登録</a></li>
+          <li><a href="./contact_address.html" class="nav_item">連絡先登録</a></li>
+          <li><a href="./attendance_list.html" class="nav_item">勤怠状況一覧表示</a></li>
+          <li><a href="./login.html" class="nav_item">ログアウト</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="main_contents">
+        <div class="main_contents_title">
+          <h1>勤怠状況一覧</h1>
+        </div>
+        <div class="main_contents_body">
+        <table class="date-calender">
+          <tr>
+            <th>日付</th>
+            <th>開始</th>
+            <th>終了</th>
+            <th>休憩</th>
+            <th>総労働</th>
+          </tr>
+          <tbody>
+            <tr th:each="attendance:${attendances}" >
+              <td th:text="${attendance.hizuke}"></td>
+              <td th:text="${attendance.start}"></td>
+              <td th:text="${attendance.finish}"></td>
+              <td th:text="${attendance.rest}"></td>
+              <td th:text="${attendance.total}"></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    <script src="attendanceList.js"></script>
+   </body>
+</html>

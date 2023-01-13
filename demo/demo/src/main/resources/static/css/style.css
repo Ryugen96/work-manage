@@ -1,0 +1,25 @@
+body {
+    background-color: #f0f0f0;
+    margin: 150px;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 45px 82px;
+    font-size: 36px;
+    cursor: pointer;
+    margin-top: 80px;
+}
+#form {
+    text-align: center;
+}
+#user-name {
+    font-size: 30px;
+    text-align: center;
+}
+#state {
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
